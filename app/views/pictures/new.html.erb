@@ -5,6 +5,7 @@
   <%= simple_form_for @picture, html: {multipart: true } do |f| %>
     <div class="form-group">
       <%= f.input :image , type: :file %>
+      <%= f.input :remote_image_url, input_html: {class: "form-control"} %>
       <%= f.input :title, input_html: {class: "form-control"}%>
       <%= f.input :description, input_html: {class: "form-control"}%>
     </div>

@@ -1,0 +1,6 @@
+<div class="col-md-12">
+  <% @pictures.each do |p| %>
+    <%= image_tag p.image.thumb.url.to_s %>
+    <h3><%= link_to(p.title, picture_path(p)) %></h3>
+  <% end %>
+</div>
