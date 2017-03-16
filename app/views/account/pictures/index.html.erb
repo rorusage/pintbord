@@ -1,7 +1,8 @@
 <div class="col-md-12">
+  <h1 class="text-center">我上傳的圖</h1>
   <% @pictures.each_slice(3) do |ps| %>
     <div class="row">
-        <% ps.each do |p| %>
+      <% ps.each do |p| %>
         <div class="col-md-4">
           <%= image_tag p.image.thumb.url.to_s %>
           <h3><%= link_to(p.title, picture_path(p)) %></h3>
@@ -20,8 +21,3 @@
     <hr>
   <% end %>
 </div>
-
-
-
-
-

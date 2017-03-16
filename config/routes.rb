@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :account do
+    resources :pictures
+  end
   devise_for :users
   root 'pictures#index'
   resources :pictures do
